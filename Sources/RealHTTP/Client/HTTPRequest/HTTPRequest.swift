@@ -448,7 +448,7 @@ extension HTTPRequest {
     ///
     /// - Parameter client: client instance.
     /// - Returns: `URLRequest`
-    internal func urlRequest(inClient client: HTTPClient?) async throws -> URLRequest {
+    public func urlRequest(inClient client: HTTPClient?) async throws -> URLRequest {
         guard let client = client,
               let fullURL = urlComponents.fullURLInClient(client) else {
             throw HTTPError(.invalidURL)
